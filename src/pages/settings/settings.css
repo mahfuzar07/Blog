@@ -1,0 +1,77 @@
+.settings {
+  display: flex;
+}
+.settingsWrapper {
+  flex: 9;
+  padding: 20px;
+}
+.settingsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settinfsupdateTitle {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.settinfsdeleteTitle {
+  font-size: 14px;
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: rgb(173, 40, 40);
+  padding: 5px;
+  border-radius: 5px;
+}
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+}
+.settingsForm > label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.settingsForm > input {
+  color: gray;
+  margin: 10px 0;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  outline: none;
+  padding-left: 10px;
+}
+
+.settingsPP {
+  display: flex;
+  align-items: center;
+
+  margin: 10px 0px;
+}
+.settingsPP > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+
+  object-fit: cover;
+}
+.settingsPPIcon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: lightcoral;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+.settingsSubmit {
+  width: 150px;
+  align-self: center;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}

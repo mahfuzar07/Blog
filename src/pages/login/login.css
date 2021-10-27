@@ -1,0 +1,71 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(82, 150, 144, 0.5), rgba(255, 255, 255, 0.5)),
+    url('https://images.unsplash.com/photo-1542435503-956c469947f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsb2d8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80')
+      center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 30%;
+  padding: 20px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 80px;
+  color: #223f33;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  flex: 1;
+  min-width: 40%;
+  margin: 10px 0px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid teal;
+  border-radius: 10px;
+}
+input:focus {
+  outline: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 5px 10px;
+  cursor: pointer;
+  color: #3a5050;
+}
+
+button {
+  width: 100%;
+  border: none;
+  padding: 15px 20px;
+  background: teal;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 20px 0px 30px 0px;
+}
+.Icon {
+  font-size: 12px;
+  margin-right: 10px;
+}
+.fas {
+  margin-left: 30px;
+}
