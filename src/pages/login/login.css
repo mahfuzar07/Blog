@@ -62,6 +62,10 @@ button {
   border-radius: 20px;
   margin: 20px 0px 30px 0px;
 }
+button:disabled {
+  cursor: not-allowed;
+  background-color: coral;
+}
 .Icon {
   font-size: 12px;
   margin-right: 10px;

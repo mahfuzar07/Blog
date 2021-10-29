@@ -6,7 +6,6 @@
   width: 70vw;
   height: 250px;
   border-radius: 15px;
-  object-fit: cover;
 }
 .writeForm {
   position: relative;
