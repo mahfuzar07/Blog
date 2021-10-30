@@ -57,3 +57,15 @@
   background-color: rgb(53, 138, 85);
   color: whitesmoke;
 }
+.catSelect {
+  padding: 10px;
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: 900;
+  border: none;
+  font-family: 'Lora', serif;
+  color: rgb(107, 103, 103);
+}
+.catSelect:focus {
+  outline: none;
+}

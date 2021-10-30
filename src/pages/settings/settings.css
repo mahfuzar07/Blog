@@ -10,11 +10,11 @@
   align-items: center;
   justify-content: space-between;
 }
-.settinfsupdateTitle {
+.settingsupdateTitle {
   font-size: 30px;
   margin-bottom: 20px;
 }
-.settinfsdeleteTitle {
+.settingsdeleteTitle {
   font-size: 14px;
   cursor: pointer;
   color: whitesmoke;
@@ -74,4 +74,13 @@
   padding: 10px;
   margin-top: 20px;
   cursor: pointer;
+}
+.profile {
+  display: flex;
+  padding: 5px;
+  padding-left: 0;
+}
+.profileItem {
+  margin-right: 30px;
+  font-size: 18px;
 }

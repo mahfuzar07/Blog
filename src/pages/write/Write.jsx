@@ -1,10 +1,11 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { Context } from '../../context/Context';
 import './write.css';
 
 function Write() {
   const [title, setTitle] = useState('');
+  const [categories, setCategories] = useState([]);
   const [desc, setDesc] = useState('');
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
@@ -14,6 +15,7 @@ function Write() {
     const newPost = {
       username: user.username,
       title,
+      categories,
       desc,
       file,
     };
@@ -32,6 +34,16 @@ function Write() {
       window.location.replace('/post/' + res.data._id);
     } catch (err) {}
   };
+
+  const [cats, setCats] = useState([]);
+  useEffect(() => {
+    const getCats = async () => {
+      const res = await axios.get('/cat');
+      setCats(res.data);
+    };
+    getCats();
+  });
+
   return (
     <div className="write">
       {file && (
@@ -57,6 +69,22 @@ function Write() {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
+        <div className="writeformGroup">
+          <select
+            value={categories}
+            className="catSelect"
+            onChange={(e) => setCategories([e.target.value])}
+          >
+            <option disabled selected>
+              Categories
+            </option>
+
+            {cats.map((c) => (
+              <option>{c.name}</option>
+            ))}
+          </select>
+        </div>
+
         <div className="writeformGroup">
           <textarea
             type="text"
