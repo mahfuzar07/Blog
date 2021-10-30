@@ -6,8 +6,15 @@ dotenv.config();
 const multer = require('multer');
 const path = require('path');
 
+//file
+app.use('/images', express.static(path.join(__dirname, '/images')));
+
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGO_URL, {
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
+    // useFindAndModify: true,
+  })
   .then(() => console.log('Database connect successfull'))
   .catch((err) => {
     console.log(err);
@@ -38,9 +45,6 @@ const postRoute = require('./routes/posts');
 app.use('/post', postRoute);
 const categoriesRoute = require('./routes/categories');
 app.use('/cat', categoriesRoute);
-
-//file
-app.use('/images', express.static(path.join(__dirname, '/images')));
 
 app.listen(5050, () => {
   console.log('server is running');
