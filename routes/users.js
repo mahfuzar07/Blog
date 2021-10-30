@@ -23,7 +23,7 @@ router.put('/:id', async (req, res) => {
       res.status(500).json(err);
     }
   } else {
-    res.status(401).json('you can upade only your account');
+    res.status(401).json('you can update only your account');
   }
 });
 
